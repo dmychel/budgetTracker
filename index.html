@@ -9,6 +9,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+   <div class="content">
+    <table class="budgetTracker">
+        <thead>
+            <tr class="headerRow">Date</tr>
+            <tr class="headerRow">Description</tr>
+            <tr class="headerRow">Income/Expense</tr>
+            <tr class="headerRow">Amount</tr>
+        </thead>
+        <tbody class="userData">
+            <td><input type="date"></td>
+            <td><input type="text" placeholder="Bills"></td>
+            <td>
+                <select>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </td>
+            <td><input type="number"></td>
+            <td><button type="button">&#10005;</button></td>
+        </tbody>
+    </table>
+   </div>
 </body>
 </html>

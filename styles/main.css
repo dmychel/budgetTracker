@@ -1,4 +1,9 @@
-body {
-    height: 100vh;
-    background-color: blue;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.tableHeader {
+    padding: 10px;
+    background-color: rgba(0, 143, 105, 0.553);
 }
