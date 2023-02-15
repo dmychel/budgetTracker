@@ -12,21 +12,21 @@
    <div class="content">
     <table class="budgetTracker">
         <thead>
-            <tr class="headerRow">Date</tr>
-            <tr class="headerRow">Description</tr>
-            <tr class="headerRow">Income/Expense</tr>
-            <tr class="headerRow">Amount</tr>
+            <th class="headerRow">Date</th>
+            <th class="headerRow">Description</th>
+            <th class="headerRow">Income/Expense</th>
+            <th class="headerRow">Amount</th>
         </thead>
         <tbody class="userData">
-            <td><input type="date"></td>
-            <td><input type="text" placeholder="Bills"></td>
+            <td><input type="date" class="userEntry userDate" id="date"></td>
+            <td><input type="text" placeholder="Bills" class="userEntry userDescription" id="description"></td>
             <td>
-                <select>
-                    <option value="income">Income</option>
+                <select id="numberType">
+                    <option value="income" >Income</option>
                     <option value="expense">Expense</option>
                 </select>
             </td>
-            <td><input type="number"></td>
+            <td><input type="number" class="userEntry userNumber" id="number"></td>
             <td><button type="button">&#10005;</button></td>
         </tbody>
     </table>
