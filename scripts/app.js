@@ -44,8 +44,9 @@ function sum (a){
      total.innerHTML = totalCash;
 }
 
-function newUserItem(){
-    console.log('button clicked')
+// new budgetItem
+function budgetItem(){
+    console.log('hi')
 }
 
 // console.log(date)
