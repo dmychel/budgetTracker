@@ -19,21 +19,24 @@ const total = document.getElementById('total')
 
 
 function type(){
-    if(numberType === 'expense'){
-        console.log('expense')
+    if(numberType === 'income'){
+            sum()
         }
         else {
-            console.log('income')
+            let negative = (stringToNum * 0) - stringToNum;
+            console.log(negative)
+            sum(negative)
         }
     }
 type()
 
-// function sum (){
-//     let totalCash = stringToNum + 200;
-//     total.innerHTML = totalCash
-// }
-// sum()
+function sum (a){
+    let totalCash= a + 0;
+     total.innerHTML = totalCash;
+}
+
 // console.log(date)
 // console.log(description)
 // console.log(numberType)
+// console.log(stringToNum)
 // console.log(number)
