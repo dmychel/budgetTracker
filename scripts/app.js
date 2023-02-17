@@ -15,24 +15,37 @@ const numberType = document.getElementById('numberType').value;
 const number = document.getElementById('number').value
 const stringToNum = Number(number);
 
+// span total
 const total = document.getElementById('total')
 
+// new item button
+const newItem = document.getElementById('newItem');
 
+
+// ------------------------------------------------------ //
+
+// functions
+
+// determines whether an item is and expense or income
 function type(){
     if(numberType === 'income'){
             sum()
         }
         else {
             let negative = (stringToNum * 0) - stringToNum;
-            console.log(negative)
             sum(negative)
         }
     }
 type()
 
+// determines the total
 function sum (a){
     let totalCash= a + 0;
      total.innerHTML = totalCash;
+}
+
+function newUserItem(){
+    console.log('button clicked')
 }
 
 // console.log(date)
