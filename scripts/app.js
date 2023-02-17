@@ -18,15 +18,21 @@ const stringToNum = Number(number);
 const total = document.getElementById('total')
 
 
+function type(){
+    if(numberType === 'expense'){
+        console.log('expense')
+        }
+        else {
+            console.log('income')
+        }
+    }
+type()
 
-function sum (){
-    let totalCash = stringToNum + 200;
-    total.innerHTML = totalCash
-}
-
-sum()
-// console.log(sum())
-
+// function sum (){
+//     let totalCash = stringToNum + 200;
+//     total.innerHTML = totalCash
+// }
+// sum()
 // console.log(date)
 // console.log(description)
 // console.log(numberType)
