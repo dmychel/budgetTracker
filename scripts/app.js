@@ -21,6 +21,9 @@ const total = document.getElementById('total')
 // new item button
 const newItem = document.getElementById('newItem');
 
+// user data html
+const userDataRow = document.getElementById('userData');
+
 
 // ------------------------------------------------------ //
 
@@ -46,7 +49,8 @@ function sum (a){
 
 // new budgetItem
 function budgetItem(){
-    console.log('hi')
+    let clone = userDataRow.cloneNode(true);
+    userDataRow.after(clone)
 }
 
 // console.log(date)
