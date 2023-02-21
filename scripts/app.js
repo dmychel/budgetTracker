@@ -24,32 +24,35 @@ const newItem = document.getElementById('newItem');
 // user data html
 const userDataRow = document.getElementById('userData');
 
+const userDataLength = document.querySelectorAll('#userData');
+console.log(userDataLength.length)
+
 
 // ------------------------------------------------------ //
 
 // functions
 
 // determines whether an item is and expense or income
-function type(){
-    if(numberType === 'income'){
-            sum()
-        }
-        else {
-            let negative = (stringToNum * 0) - stringToNum;
-            sum(negative)
-        }
+function type() {
+    if (numberType === 'income') {
+        sum(stringToNum)
     }
+    else {
+        let negative = (stringToNum * 0) - stringToNum;
+        sum(negative)
+    }
+}
 type()
 
 // determines the total
-function sum (a){
-    let totalCash= a + 0;
-     total.innerHTML = totalCash;
+function sum(a) {
+    let totalCash = a + 0;
+    total.innerHTML = totalCash;
 }
 
 // new budgetItem
-function budgetItem(){
-    let clone = userDataRow.cloneNode(true);
+function budgetItem() {
+    let clone = userDataRow.cloneNode(true)
     userDataRow.after(clone)
 }
 
