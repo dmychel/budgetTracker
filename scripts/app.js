@@ -50,6 +50,11 @@ function sum(a) {
     total.innerHTML = totalCash;
 }
 
+// delete item
+function deleteItem(){
+    userDataRow.remove()
+}
+
 // new budgetItem
 function budgetItem() {
     let clone = userDataRow.cloneNode(true)
