@@ -8,13 +8,6 @@ const date = document.getElementById('date').value;
 // Item Description
 const description = document.getElementById('description').value;
 
-// Expense or Income
-const numberType = document.getElementById('numberType').value;
-
-// Amount Row
-const number = document.getElementById('number').value
-const stringToNum = Number(number);
-
 // span total
 const total = document.getElementById('total')
 
@@ -24,45 +17,36 @@ const newItem = document.getElementById('newItem');
 // user data html
 const userDataRow = document.getElementById('userData');
 
-const userDataLength = document.querySelectorAll('#userData');
-console.log(userDataLength.length)
-
 
 // ------------------------------------------------------ //
 
-// functions
 
-// determines whether an item is and expense or income
-function type() {
-    if (numberType === 'income') {
-        sum(stringToNum)
-    }
-    else {
-        let negative = (stringToNum * 0) - stringToNum;
-        sum(negative)
-    }
-}
-type()
+// New item entry
 
-// determines the total
-function sum(a) {
-    let totalCash = a + 0;
-    total.innerHTML = totalCash;
+let cloneCount = 0;
+console.log(cloneCount)
+function newEntry (){
+    let clone = userDataRow.cloneNode(true);
+    userDataRow.after(clone);
+    cloneCount++
+
+    clone.id = 'userData' + cloneCount
+    console.log(cloneCount)
 }
 
-// delete item
-function deleteItem(){
-    userDataRow.remove()
+// new entry id 
+
+
+// Delete entry 
+
+// Income vs exepense
+const numberType = document.getElementById('numberType').value;
+
+if(numberType === 'income'){
+    console.log('income')
+}
+else {
+    console.log('expense')
 }
 
-// new budgetItem
-function budgetItem() {
-    let clone = userDataRow.cloneNode(true)
-    userDataRow.after(clone)
-}
-
-// console.log(date)
-// console.log(description)
-// console.log(numberType)
-// console.log(stringToNum)
-// console.log(number)
+// Total
